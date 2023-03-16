@@ -68,17 +68,45 @@ const NavItem = ({ item, level }) => {
             {...listItemProps}
             disabled={item.disabled}
             sx={{
-                borderRadius: `${customization.borderRadius}px`,
+                // borderRadius: `${customization.borderRadius}px`,
                 mb: 0.5,
                 alignItems: 'flex-start',
                 backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
                 py: level > 1 ? 1 : 1.25,
-                pl: `${level * 24}px`
+                pl: `${level * 24}px`,
+                '&.Mui-selected': {
+                    backgroundColor: '#3A3A3A',
+                    borderRight: '6px solid #B3B3B3',
+                    borderRadius: '0 3px 3px 0',
+                    '.icon': {
+                        color: '#EE3C30'
+                    },
+                    ':hover': {
+                        backgroundColor: '#3A3A3A'
+                    }
+                },
+                '&.Mui-focusVisible': {
+                    backgroundColor: '#3A3A3A'
+                },
+                ':hover': {
+                    backgroundColor: '#3A3A3A',
+                    '.icon': {
+                        color: '#FFFFFF'
+                    }
+                }
             }}
             selected={customization.isOpen.findIndex((id) => id === item.id) > -1}
             onClick={() => itemHandler(item.id)}
         >
-            <ListItemIcon sx={{ my: 'auto', minWidth: !item?.icon ? 18 : 36 }}>{itemIcon}</ListItemIcon>
+            <ListItemIcon
+                sx={{
+                    my: 'auto',
+                    minWidth: !item?.icon ? 18 : 36,
+                    color: '#FFFFFF'
+                }}
+            >
+                {itemIcon}
+            </ListItemIcon>
             <ListItemText
                 primary={
                     <Typography variant={customization.isOpen.findIndex((id) => id === item.id) > -1 ? 'h5' : 'body1'} color="#FFFFFF">

@@ -90,20 +90,36 @@ const NavCollapse = ({ menu, level }) => {
         <>
             <ListItemButton
                 sx={{
-                    borderRadius: `${customization.borderRadius}px`,
+                    // borderRadius: `${customization.borderRadius}px`,
                     mb: 0.5,
                     alignItems: 'flex-start',
                     backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
                     py: level > 1 ? 1 : 1.25,
-                    pl: `${level * 24}px`
+                    pl: `${level * 24}px`,
+                    '&.Mui-selected': {
+                        backgroundColor: '#3A3A3A',
+                        borderRight: '6px solid #B3B3B3',
+                        '.icon': {
+                            color: '#EE3C30'
+                        }
+                    },
+                    '&.Mui-focusVisible': {
+                        backgroundColor: '#3A3A3A'
+                    },
+                    ':hover': {
+                        backgroundColor: '#3A3A3A',
+                        '.icon': {
+                            color: '#FFFFFF'
+                        }
+                    }
                 }}
                 selected={selected === menu.id}
                 onClick={handleClick}
             >
-                <ListItemIcon sx={{ my: 'auto', minWidth: !menu.icon ? 18 : 36 }}>{menuIcon}</ListItemIcon>
+                <ListItemIcon sx={{ my: 'auto', minWidth: !menu.icon ? 18 : 36, color: '#FFFFFF' }}>{menuIcon}</ListItemIcon>
                 <ListItemText
                     primary={
-                        <Typography variant={selected === menu.id ? 'h5' : 'body1'} color="inherit" sx={{ my: 'auto' }}>
+                        <Typography variant={selected === menu.id ? 'h5' : 'body1'} color="#FFFFFF" sx={{ my: 'auto' }}>
                             {menu.title}
                         </Typography>
                     }
