@@ -42,10 +42,10 @@ const Header = ({ handleLeftDrawerToggle }) => {
                             ...theme.typography.mediumAvatar,
                             transition: 'all .2s ease-in-out',
                             backgroundColor: '#373737',
-                            color: theme.palette.secondary.dark,
+                            color: '#FFFFFF',
                             '&:hover': {
-                                background: theme.palette.secondary.dark,
-                                color: theme.palette.secondary.light
+                                background: '#EE3C30',
+                                color: '#FFFFFF'
                             }
                         }}
                         onClick={handleLeftDrawerToggle}
