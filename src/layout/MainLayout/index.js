@@ -74,7 +74,7 @@ const MainLayout = () => {
     };
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', backgroundColor: '#373737' }}>
             <CssBaseline />
             {/* header */}
             <AppBar
@@ -83,8 +83,8 @@ const MainLayout = () => {
                 color="inherit"
                 elevation={0}
                 sx={{
-                    bgcolor: theme.palette.background.default,
-                    transition: leftDrawerOpened ? theme.transitions.create('width') : 'none'
+                    transition: leftDrawerOpened ? theme.transitions.create('width') : 'none',
+                    backgroundColor: '#373737'
                 }}
             >
                 <Toolbar>
@@ -96,7 +96,13 @@ const MainLayout = () => {
             <Sidebar drawerOpen={!matchDownMd ? leftDrawerOpened : !leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
 
             {/* main content */}
-            <Main theme={theme} open={leftDrawerOpened}>
+            <Main
+                theme={theme}
+                open={leftDrawerOpened}
+                st={{
+                    backgroundColor: '#1D1D1D'
+                }}
+            >
                 {/* breadcrumb */}
                 <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign />
                 <Outlet />

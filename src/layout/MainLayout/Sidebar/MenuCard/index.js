@@ -42,7 +42,7 @@ const CardStyle = styled(Card)(({ theme }) => ({
         position: 'absolute',
         width: '157px',
         height: '157px',
-        background: theme.palette.primary[200],
+        background: '#1D1D1D',
         borderRadius: '50%',
         top: '-105px',
         right: '-96px'
