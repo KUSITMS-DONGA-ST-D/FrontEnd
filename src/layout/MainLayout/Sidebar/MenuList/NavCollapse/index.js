@@ -101,10 +101,16 @@ const NavCollapse = ({ menu, level }) => {
                         borderRight: '6px solid #B3B3B3',
                         '.icon': {
                             color: '#EE3C30'
+                        },
+                        ':hover': {
+                            backgroundColor: '#3A3A3A'
                         }
                     },
                     '&.Mui-focusVisible': {
-                        backgroundColor: '#3A3A3A'
+                        backgroundColor: '#3A3A3A',
+                        ':hover': {
+                            backgroundColor: '#3A3A3A'
+                        }
                     },
                     ':hover': {
                         backgroundColor: '#3A3A3A',
