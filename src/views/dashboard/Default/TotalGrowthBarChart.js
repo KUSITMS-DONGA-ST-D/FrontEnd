@@ -21,15 +21,15 @@ import chartData from './chart-data/total-growth-bar-chart';
 const status = [
     {
         value: 'today',
-        label: 'Today'
+        label: '1-day'
     },
     {
         value: 'month',
-        label: 'This Month'
+        label: '7-day'
     },
     {
         value: 'year',
-        label: 'This Year'
+        label: '30-day'
     }
 ];
 
@@ -100,10 +100,10 @@ const TotalGrowthBarChart = ({ isLoading }) => {
                                 <Grid item>
                                     <Grid container direction="column" spacing={1}>
                                         <Grid item>
-                                            <Typography variant="subtitle2">Total Growth</Typography>
+                                            <Typography variant="subtitle2">대시보드</Typography>
                                         </Grid>
                                         <Grid item>
-                                            <Typography variant="h3">$2,324.00</Typography>
+                                            <Typography variant="h3">유저 분석</Typography>
                                         </Grid>
                                     </Grid>
                                 </Grid>

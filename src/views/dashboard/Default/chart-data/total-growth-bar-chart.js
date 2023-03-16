@@ -1,7 +1,7 @@
 // ===========================|| DASHBOARD - TOTAL GROWTH BAR CHART ||=========================== //
 
 const chartData = {
-    height: 480,
+    height: 130,
     type: 'bar',
     options: {
         chart: {
@@ -16,7 +16,7 @@ const chartData = {
         },
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 130,
                 options: {
                     legend: {
                         position: 'bottom',
