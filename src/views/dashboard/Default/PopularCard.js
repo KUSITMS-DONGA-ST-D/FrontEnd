@@ -43,7 +43,7 @@ const PopularCard = ({ isLoading }) => {
                             <Grid item xs={12}>
                                 <Grid container alignContent="center" justifyContent="space-between">
                                     <Grid item>
-                                        <Typography variant="h4">Popular Stocks</Typography>
+                                        <Typography variant="h4">카테고리별 매출</Typography>
                                     </Grid>
                                     <Grid item>
                                         <MoreHorizOutlinedIcon
