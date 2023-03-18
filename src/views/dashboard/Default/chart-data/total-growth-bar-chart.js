@@ -2,13 +2,13 @@
 
 const chartData = {
     height: 130,
-    type: 'bar',
+    type: 'line',
     options: {
         chart: {
-            id: 'bar-chart',
+            id: 'line-chart',
             stacked: true,
             toolbar: {
-                show: true
+                show: false
             },
             zoom: {
                 enabled: true
