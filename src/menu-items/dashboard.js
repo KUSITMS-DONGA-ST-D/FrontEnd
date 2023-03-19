@@ -25,23 +25,23 @@ const dashboard = {
             type: 'collapse',
             icon: icons.IconKey,
 
-            children: [
-                {
-                    id: 'login3',
-                    title: 'Login',
-                    type: 'item',
-                    url: '/pages/login/login3',
-                    target: true
-                },
-                {
-                    id: 'register3',
-                    title: 'Register',
-                    type: 'item',
-                    url: '/pages/register/register3',
-                    target: true
-                }
-            ]
-        },
+        //     children: [
+        //         {
+        //             id: 'login3',
+        //             title: 'Login',
+        //             type: 'item',
+        //             url: '/pages/login/login3',
+        //             target: true
+        //         },
+        //         {
+        //             id: 'register3',
+        //             title: 'Register',
+        //             type: 'item',
+        //             url: '/pages/register/register3',
+        //             target: true
+        //         }
+        //     ]
+        // },
         {
             id: 'util-typography',
             title: '사용자관리',
@@ -96,6 +96,28 @@ const dashboard = {
             icon: icons.IconBrandChrome,
             breadcrumbs: false
         }
+        // {
+        //     id: 'icons',
+        //     title: 'Icons',
+        //     type: 'collapse',
+        //     icon: icons.IconWindmill,
+        //     children: [
+        //         {
+        //             id: 'tabler-icons',
+        //             title: 'Tabler Icons',
+        //             type: 'item',
+        //             url: '/icons/tabler-icons',
+        //             breadcrumbs: false
+        //         },
+        //         {
+        //             id: 'material-icons',
+        //             title: 'Material Icons',
+        //             type: 'item',
+        //             url: '/icons/material-icons',
+        //             breadcrumbs: false
+        //         }
+        //     ]
+        // },
     ]
 };
 
