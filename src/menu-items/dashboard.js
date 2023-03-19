@@ -21,7 +21,7 @@ const dashboard = {
         },
         {
             id: 'authentication',
-            title: 'Authentication',
+            title: '매모관리',
             type: 'collapse',
             icon: icons.IconKey,
 
@@ -44,7 +44,7 @@ const dashboard = {
         },
         {
             id: 'util-typography',
-            title: 'Typography',
+            title: '사용자관리',
             type: 'item',
             url: '/utils/util-typography',
             icon: icons.IconTypography,
@@ -52,7 +52,7 @@ const dashboard = {
         },
         {
             id: 'util-color',
-            title: 'Color',
+            title: '공지사항관리',
             type: 'item',
             url: '/utils/util-color',
             icon: icons.IconPalette,
@@ -60,7 +60,7 @@ const dashboard = {
         },
         {
             id: 'util-shadow',
-            title: 'Shadow',
+            title: '회원관리',
             type: 'item',
             url: '/utils/util-shadow',
             icon: icons.IconShadow,
@@ -68,7 +68,7 @@ const dashboard = {
         },
         {
             id: 'icons',
-            title: 'Icons',
+            title: '콘텐츠관리',
             type: 'collapse',
             icon: icons.IconWindmill,
             children: [
@@ -90,7 +90,7 @@ const dashboard = {
         },
         {
             id: 'sample-page',
-            title: 'Sample Page',
+            title: 'live 관리',
             type: 'item',
             url: '/sample-page',
             icon: icons.IconBrandChrome,

@@ -1,0 +1,26 @@
+.cc{
+    height: 200px;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 6px;
+    font-weight:bold;
+}
+.cc1{
+    border: 1px solid gray;
+    height: 170px;
+    display: flex;
+    text-align: center;
+    margin-top: 5px;
+    
+}
+.cc2-1,.cc2-2{
+    
+    border: 1px solid gray;
+    width: 50%;
+    
+}
+.cc3{
+    border: 1px solid gray;
+    height: 150px;
+    margin-top: 3px;
+}

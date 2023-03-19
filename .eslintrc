@@ -21,7 +21,7 @@
         "ecmaVersion": 12
     },
     "plugins": ["prettier", "react", "react-hooks"],
-    "rules": {
+    "rules": {      
         "react/jsx-filename-extension": 0,
         "no-param-reassign": 0,
         "react/prop-types": 1,

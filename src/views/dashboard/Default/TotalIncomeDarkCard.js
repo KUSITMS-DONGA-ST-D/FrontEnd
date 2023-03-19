@@ -13,10 +13,11 @@ import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 
 // styles
 const CardWrapper = styled(MainCard)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: '#fff',
     color: theme.palette.primary.light,
     overflow: 'hidden',
     position: 'relative',
+    
     '&:after': {
         content: '""',
         position: 'absolute',
@@ -73,13 +74,17 @@ const TotalIncomeDarkCard = ({ isLoading }) => {
                                         mb: 0.45
                                     }}
                                     primary={
-                                        <Typography variant="h4" sx={{ color: '#fff' }}>
-                                            $203k
+                                        <Typography variant="h4" sx={{ color: '#252525' }}>
+                                            메모
                                         </Typography>
                                     }
                                     secondary={
-                                        <Typography variant="subtitle2" sx={{ color: 'primary.light', mt: 0.25 }}>
-                                            Total Income
+                                        <Typography variant="subtitle2" sx={{ color: '#252525', mt: 0.25 }}>
+                                            오늘dkfnskdnfksdflS
+                                            SDnfsdnflksdflKSndflkd
+                                            SDnfsdnflksdflKSndflkdsfk
+                                            sdla;lsdfdkfsd;kfs;ldfdf;s
+                                            s;ldmfsldfsdfkajdfkdfdflsd
                                         </Typography>
                                     }
                                 />
