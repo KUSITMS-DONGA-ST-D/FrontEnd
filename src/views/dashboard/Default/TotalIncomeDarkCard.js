@@ -17,7 +17,6 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
     color: theme.palette.primary.light,
     overflow: 'hidden',
     position: 'relative',
-    
     '&:after': {
         content: '""',
         position: 'absolute',
@@ -80,10 +79,7 @@ const TotalIncomeDarkCard = ({ isLoading }) => {
                                     }
                                     secondary={
                                         <Typography variant="subtitle2" sx={{ color: '#252525', mt: 0.25 }}>
-                                            오늘dkfnskdnfksdflS
-                                            SDnfsdnflksdflKSndflkd
-                                            SDnfsdnflksdflKSndflkdsfk
-                                            sdla;lsdfdkfsd;kfs;ldfdf;s
+                                            오늘dkfnskdnfksdflS SDnfsdnflksdflKSndflkd SDnfsdnflksdflKSndflkdsfk sdla;lsdfdkfsd;kfs;ldfdf;s
                                             s;ldmfsldfsdfkajdfkdfdflsd
                                         </Typography>
                                     }
