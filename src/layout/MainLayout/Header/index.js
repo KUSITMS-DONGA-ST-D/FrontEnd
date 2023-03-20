@@ -25,16 +25,16 @@ const Header = ({ handleLeftDrawerToggle }) => {
                 sx={{
                     width: 228,
                     display: 'flex',
-                    backgroundColor: '#373737',
+                    backgroundColor: '#FFFFFF',
                     [theme.breakpoints.down('md')]: {
                         width: 'auto'
                     }
                 }}
             >
-                <Box component="span" sx={{ display: { xs: 'none', md: 'block', backgroundColor: '#373737' }, flexGrow: 1 }}>
+                <Box component="span" sx={{ display: { xs: 'none', md: 'block', backgroundColor: '#FFFFFF' }, flexGrow: 1 }}>
                     <LogoSection />
                 </Box>
-                <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden', backgroundColor: '#373737' }}>
+                <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
                     <Avatar
                         variant="rounded"
                         sx={{
@@ -42,7 +42,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
                             ...theme.typography.mediumAvatar,
                             transition: 'all .2s ease-in-out',
                             backgroundColor: '#373737',
-                            color: '#FFFFFF',
+                            color: '#979797',
                             '&:hover': {
                                 background: '#EE3C30',
                                 color: '#FFFFFF'
