@@ -13,22 +13,22 @@ import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
 import React from 'react';
 import './Default/chart-data/Chart3.css';
 
-function Chart3(){
-    return(
-      <div className='cc'>오늘의 일정
-        <div className='cc1'>
-            <div className='cc2-1'>콘텐츠 업로드
-            <div className='cc3'>내용
+function Chart3() {
+    return (
+        <div className="cc">
+            오늘의 일정
+            <div className="cc1">
+                <div className="cc2-1">
+                    콘텐츠 업로드
+                    <div className="cc3">내용</div>
                 </div>
-            </div>
-            <div className='cc2-2'>Live 일정
-            <div className='cc3'>내용
+                <div className="cc2-2">
+                    Live 일정
+                    <div className="cc3">내용</div>
                 </div>
             </div>
         </div>
-      </div>
-    )
-  }
+    );
+}
 
- 
 export default Chart3;

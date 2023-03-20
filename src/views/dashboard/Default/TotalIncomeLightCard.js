@@ -79,9 +79,7 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                                                 mt: 0.5
                                             }}
                                         >
-                                            필독* 새로운 공지사항 확인
-                                            필독* 최강D팀
-                                            필독* 최강D팀
+                                            필독* 새로운 공지사항 확인 필독* 최강D팀 필독* 최강D팀
                                         </Typography>
                                     }
                                 />
