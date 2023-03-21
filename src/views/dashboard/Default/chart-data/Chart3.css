@@ -1,26 +1,24 @@
-.cc{
+.cc {
     height: 200px;
-    border: 1px solid gray;
+    border: none;
     background-color: white;
     border-radius: 6px;
-    font-weight:bold;
+    font-weight: bold;
+    padding: 16px;
 }
-.cc1{
-    border: 1px solid gray;
-    height: 170px;
+.cc1 {
     display: flex;
     text-align: center;
     margin-top: 5px;
-    
+    height: 100%;
 }
-.cc2-1,.cc2-2{
-    
-    border: 1px solid gray;
+.cc2-1,
+.cc2-2 {
+    font-weight: bold;
     width: 50%;
-    
+    height: 100%;
 }
-.cc3{
-    border: 1px solid gray;
-    height: 150px;
+.cc3 {
     margin-top: 3px;
+    height: 70%;
 }
