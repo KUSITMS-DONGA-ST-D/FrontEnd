@@ -26,3 +26,7 @@
     border: 1px solid blue;
     display: flex;
   }
+  .common-table-row{
+    display: flex;
+    border: 1px solid red;
+  }
