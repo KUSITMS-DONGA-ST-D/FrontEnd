@@ -41,7 +41,7 @@ const dashboard = {
         //             target: true
         //         }
         //     ]
-        // },
+            },
         {
             id: 'util-typography',
             title: '사용자관리',
