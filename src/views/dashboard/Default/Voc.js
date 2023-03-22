@@ -39,7 +39,7 @@ export default Voc;*/
 const Voc = props => {
     return (
       <>
-        <CommonTable headersName={['글번호', '제목', '등록일', '조회수']}>
+        <CommonTable headersName={['글번호', '제목', '등록일', '조회수']}></CommonTable>
           <CommonTableRow>
             <CommonTableColumn>1</CommonTableColumn>
             <CommonTableColumn>첫번째 게시글입니다.</CommonTableColumn>
@@ -70,7 +70,7 @@ const Voc = props => {
             <CommonTableColumn>2020-10-25</CommonTableColumn>
             <CommonTableColumn>4</CommonTableColumn>
           </CommonTableRow>
-        </CommonTable>
+        
       </>
     )
   }

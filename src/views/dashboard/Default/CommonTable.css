@@ -3,7 +3,9 @@
     margin: 0 auto;
     text-align: center;
     border-spacing: 0;
-    border: 1px solid red;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border-top: 15px solid rgb(247, 95, 95);
   }
   
   .common-table-header-column {
@@ -12,21 +14,20 @@
     font-size: 5px;
     padding: 10px 5px;
     font-weight: bold;
-    border: 1px solid red;
   }
   
   .common-table-row:hover {
-    background-color: #eceaea;
+    background-color: #e7e6e6;
     cursor: pointer;
-    border: 1px solid purple;
   }
   
   .common-table-column {
     padding: 5px 3px;
-    border: 1px solid blue;
     display: flex;
+    
+    height: 30px;
   }
   .common-table-row{
     display: flex;
-    border: 1px solid red;
+    background-color: #FFFFFF;
   }

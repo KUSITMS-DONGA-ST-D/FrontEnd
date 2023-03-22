@@ -28,10 +28,10 @@ const Dashboard = () => {
         <Grid container spacing={gridSpacing}>
             <Grid item xs={6}>
                 <Grid container spacing={gridSpacing}>
-                    <Grid item lg={7} md={7} sm={6} xs={12}>
+                    <Grid item lg={6} md={7} sm={6} xs={12}>
                         <Calendarz isLoading={isLoading} />
                     </Grid>
-                    <Grid item lg={5} md={12} sm={12} xs={12}>
+                    <Grid item lg={6} md={12} sm={12} xs={12}>
                         <Grid container spacing={gridSpacing}>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
                                 <Voc />

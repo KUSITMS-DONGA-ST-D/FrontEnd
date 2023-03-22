@@ -29,9 +29,9 @@ const dashboard = {
         },
         {
             id: 'authentication',
-            title: '매모관리',
+            title: '메모관리',
             type: 'item',
-            url: '/pages/login/login3',
+            url: '/utils/util-typography',
             svgIcon: (
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="16" height="16" rx="2" fill="#979797" />
@@ -63,7 +63,7 @@ const dashboard = {
             id: 'util-typography',
             title: '사용자관리',
             type: 'item',
-            url: '/utils/util-typography',
+            url: '/pages/login/login3',
             icon: icons.IconTypography,
             svgIcon: (
                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
