@@ -4,7 +4,7 @@
     text-align: center;
     border-spacing: 0;
     background-color: #FFFFFF;
-    border-radius: 6px;
+    border-radius: 10px;
     border-top: 15px solid rgb(247, 95, 95);
   }
   
@@ -24,7 +24,6 @@
   .common-table-column {
     padding: 5px 3px;
     display: flex;
-    
     height: 30px;
   }
   .common-table-row{

@@ -15,6 +15,7 @@ import { gridSpacing } from 'store/constant';
 import Calendarz from './Calendarz';
 import Chart3 from '../Chart3';
 import Voc from './Voc';
+import Chart4 from './Chart4';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
@@ -45,7 +46,7 @@ const Dashboard = () => {
                         <Chart3 />
                     </Grid>
                     <Grid item xs={12} md={6} lg={12}>
-                        <PopularCard isLoading={isLoading} />
+                        <Chart4 />
                     </Grid>
                 </Grid>
             </Grid>
