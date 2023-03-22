@@ -74,7 +74,7 @@ const MainLayout = () => {
     };
 
     return (
-        <Box sx={{ display: 'flex', backgroundColor: '#373737' }}>
+        <Box sx={{ display: 'flex', backgroundColor: '#FFFFFF' }}>
             <CssBaseline />
             {/* header */}
             <AppBar
@@ -84,7 +84,7 @@ const MainLayout = () => {
                 elevation={0}
                 sx={{
                     transition: leftDrawerOpened ? theme.transitions.create('width') : 'none',
-                    backgroundColor: '#373737'
+                    backgroundColor: '#FFFFFF'
                 }}
             >
                 <Toolbar>

@@ -20,9 +20,9 @@ const NavItem = ({ item, level }) => {
     const dispatch = useDispatch();
     const customization = useSelector((state) => state.customization);
     const matchesSM = useMediaQuery(theme.breakpoints.down('lg'));
-
+    const SvgIcon = item.svgIcon;
     const Icon = item.icon;
-    const itemIcon = item?.icon ? (
+    const itemIcon = item?.svgicon ? (
         <Icon stroke={1.5} size="1.3rem" />
     ) : (
         <FiberManualRecordIcon
@@ -50,7 +50,6 @@ const NavItem = ({ item, level }) => {
         dispatch({ type: MENU_OPEN, id });
         if (matchesSM) dispatch({ type: SET_MENU, opened: false });
     };
-
     // active menu item on page load
     useEffect(() => {
         const currentIndex = document.location.pathname
@@ -62,75 +61,185 @@ const NavItem = ({ item, level }) => {
         }
         // eslint-disable-next-line
     }, []);
-
     return (
-        <ListItemButton
-            {...listItemProps}
-            disabled={item.disabled}
-            sx={{
-                // borderRadius: `${customization.borderRadius}px`,
-                mb: 0.5,
-                alignItems: 'flex-start',
-                backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
-                py: level > 1 ? 1 : 1.25,
-                pl: `${level * 24}px`,
-                '&.Mui-selected': {
-                    backgroundColor: '#3A3A3A',
-                    borderRight: '6px solid #B3B3B3',
-                    borderRadius: '0 3px 3px 0',
-                    '.icon': {
-                        color: '#EE3C30'
-                    },
-                    ':hover': {
-                        backgroundColor: '#3A3A3A'
-                    }
-                },
-                '&.Mui-focusVisible': {
-                    backgroundColor: '#3A3A3A'
-                },
-                ':hover': {
-                    backgroundColor: '#3A3A3A',
-                    '.icon': {
-                        color: '#FFFFFF'
-                    }
-                }
-            }}
-            selected={customization.isOpen.findIndex((id) => id === item.id) > -1}
-            onClick={() => itemHandler(item.id)}
-        >
-            <ListItemIcon
-                sx={{
-                    my: 'auto',
-                    minWidth: !item?.icon ? 18 : 36,
-                    color: '#FFFFFF'
-                }}
-            >
-                {itemIcon}
-            </ListItemIcon>
-            <ListItemText
-                primary={
-                    <Typography variant={customization.isOpen.findIndex((id) => id === item.id) > -1 ? 'h5' : 'body1'} color="#FFFFFF">
-                        {item.title}
-                    </Typography>
-                }
-                secondary={
-                    item.caption && (
-                        <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption }} display="block" gutterBottom>
-                            {item.caption}
-                        </Typography>
-                    )
-                }
-            />
-            {item.chip && (
-                <Chip
-                    color={item.chip.color}
-                    variant={item.chip.variant}
-                    size={item.chip.size}
-                    label={item.chip.label}
-                    avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
-                />
+        <>
+            {item.id != 'sample-page' ? (
+                <ListItemButton
+                    {...listItemProps}
+                    disabled={item.disabled}
+                    sx={{
+                        // borderRadius: `${customization.borderRadius}px`,
+                        mb: 0.5,
+                        alignItems: 'flex-start',
+                        backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
+                        py: level > 1 ? 1 : 1.25,
+                        pl: `${level * 24}px`,
+                        '&.Mui-selected': {
+                            backgroundColor: '#FFFFFF',
+                            borderRight: '6px solid #FF6060',
+                            borderRadius: '0 3px 3px 0',
+                            color: '#252525',
+                            '.icon': {
+                                color: '#EE3C30'
+                            },
+                            ':hover': {
+                                backgroundColor: '#FFFFFF',
+                                color: '#252525'
+                            },
+                            h5: {
+                                color: '#252525'
+                            },
+                            svg: {
+                                fill: '#252525',
+                                '*': {
+                                    fill: '#252525'
+                                }
+                            }
+                        },
+                        '&.Mui-focusVisible': {
+                            backgroundColor: '#FFFFFF'
+                        },
+                        ':hover': {
+                            backgroundColor: '#FFFFFF',
+                            '.icon': {
+                                color: '#979797'
+                            }
+                        }
+                    }}
+                    selected={customization.isOpen.findIndex((id) => id === item.id) > -1}
+                    onClick={() => itemHandler(item.id)}
+                >
+                    <ListItemIcon
+                        sx={{
+                            my: 'auto',
+                            minWidth: !item?.icon ? 18 : 36,
+                            svg: {
+                                fill: '#979797',
+                                '*': {
+                                    fill: '#979797'
+                                }
+                            }
+                        }}
+                    >
+                        {SvgIcon}
+                    </ListItemIcon>
+
+                    <ListItemText
+                        primary={
+                            <Typography
+                                variant={customization.isOpen.findIndex((id) => id === item.id) > -1 ? 'h5' : 'body1'}
+                                color="#979797"
+                                sx={{
+                                    '&:hover': {
+                                        color: '#252525'
+                                    }
+                                }}
+                            >
+                                {item.titleIcon}
+                                {item.title}
+                            </Typography>
+                        }
+                        secondary={
+                            item.caption && (
+                                <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption }} display="block" gutterBottom>
+                                    {item.caption}
+                                </Typography>
+                            )
+                        }
+                    />
+                    {item.chip && (
+                        <Chip
+                            color={item.chip.color}
+                            variant={item.chip.variant}
+                            size={item.chip.size}
+                            label={item.chip.label}
+                            avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
+                        />
+                    )}
+                </ListItemButton>
+            ) : (
+                <ListItemButton
+                    {...listItemProps}
+                    disabled={item.disabled}
+                    sx={{
+                        // borderRadius: `${customization.borderRadius}px`,
+                        mb: 0.5,
+                        alignItems: 'flex-start',
+                        backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
+                        py: level > 1 ? 1 : 1.25,
+                        pl: `${level * 24}px`,
+                        '&.Mui-selected': {
+                            backgroundColor: '#FFFFFF',
+                            borderRight: '6px solid #FF6060',
+                            borderRadius: '0 3px 3px 0',
+                            '.icon': {
+                                color: '#EE3C30'
+                            },
+                            ':hover': {
+                                backgroundColor: '#FFFFFF',
+                                color: '#252525'
+                            },
+                            h5: {
+                                color: '#252525'
+                            }
+                        },
+                        '&.Mui-focusVisible': {
+                            backgroundColor: '#FFFFFF'
+                        },
+                        ':hover': {
+                            backgroundColor: '#FFFFFF',
+                            '.icon': {
+                                color: '#979797'
+                            }
+                        }
+                    }}
+                    selected={customization.isOpen.findIndex((id) => id === item.id) > -1}
+                    onClick={() => itemHandler(item.id)}
+                >
+                    <ListItemIcon
+                        sx={{
+                            my: 'auto',
+                            minWidth: !item?.icon ? 18 : 36
+                        }}
+                    >
+                        {SvgIcon}
+                    </ListItemIcon>
+
+                    <ListItemText
+                        primary={
+                            <Typography
+                                variant={customization.isOpen.findIndex((id) => id === item.id) > -1 ? 'h5' : 'body1'}
+                                color="#979797"
+                                sx={{
+                                    '&:hover': {
+                                        color: '#252525'
+                                    }
+                                }}
+                            >
+                                {item.titleIcon}
+                                {item.title}
+                            </Typography>
+                        }
+                        secondary={
+                            item.caption && (
+                                <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption }} display="block" gutterBottom>
+                                    {item.caption}
+                                </Typography>
+                            )
+                        }
+                    />
+                    {item.chip && (
+                        <Chip
+                            color={item.chip.color}
+                            variant={item.chip.variant}
+                            size={item.chip.size}
+                            label={item.chip.label}
+                            avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
+                        />
+                    )}
+                </ListItemButton>
             )}
-        </ListItemButton>
+        </>
     );
 };
 
