@@ -11,6 +11,7 @@ export const ModalContainer = styled.div`
     /*스크롤 될 만큼의 크기를 위해 height설정*/
     /*모달창 x버튼의 부모를 전체 화면으로 주기 위해 상위 요소 relative처리*/
     position: relative;
+    z-index: 9999;
 `;
 
 export const ModalBackdrop = styled.div`
@@ -19,6 +20,7 @@ export const ModalBackdrop = styled.div`
     height: 100vh;
     /*스크롤이 되도 모달창이 고정 되도록 position:fixed*/
     position: fixed;
+    left: 0;
     bottom: 0;
     /* 자식 컴포넌트인 모달창을 가운데 오게 하기 위해 flex설정*/
     display: flex;
@@ -39,11 +41,12 @@ export const ModalView = styled.div.attrs((props) => ({
     role: 'dialog'
 }))`
     display: flex;
+    text-align:center;
     justify-content: center;
     align-items: center;
     position: fixed;
-    width: 200px;
-    height: 100px;
+    width: 500px;
+    height: 500px;
     border-radius: 1rem;
     background-color: white;
     > .close-btn {
@@ -52,6 +55,29 @@ export const ModalView = styled.div.attrs((props) => ({
         // 중앙에서 위로 10px 이동
         top: 10px;
         cursor: pointer;
+    }
+    .first{
+        height: 400px;
+        width: 80%;
+        border: 1px solid red;
+
+    }
+    .date-set{
+        text-align: left;
+        border: 1px solid red;
+        height: 20%;
+        margin-top: 10px;
+    }
+    .check{
+        position: absolute;
+        bottom: 17px;
+        width :200px;
+        background-color: red;
+        font-Weight : bold;
+        color: white;
+        height: 30px;
+        border-radius: 20px;
+        
     }
 `;
 
@@ -68,7 +94,14 @@ export const Modal = () => {
                 {isOpen ? (
                     <ModalBackdrop onClick={openModalHandler}>
                         <ModalView>
-                            <div className="close-btn">&times;</div>모달창
+                            <div className="close-btn">&times;</div>
+                            <div className='first'>필터
+                            <div className='date-set'>날짜 세팅 :</div>
+                            <div className='date-set'>연령 :</div>
+                            <div className='date-set'>성별 :</div>
+                            <div className='date-set'>과 :</div>
+                            </div>
+                            <button className ='check'>확인</button>
                         </ModalView>
                     </ModalBackdrop>
                 ) : null}

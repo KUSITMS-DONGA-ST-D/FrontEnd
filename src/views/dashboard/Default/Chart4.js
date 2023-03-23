@@ -1,13 +1,9 @@
-<<<<<<< HEAD
+import { Modal } from './Modal';
 import React, { useState } from 'react';
-=======
-import { useState } from 'react';
->>>>>>> 1328745bebef1e834e23b3b4fa366e47651e2e07
 import './Chart4.css';
 import ModalBasic from './ModalBasic';
 
 function Chart4() {
-<<<<<<< HEAD
     const [modalOpen, setModalOpen] = useState(false);
 
     const showModal = () => {
@@ -17,20 +13,9 @@ function Chart4() {
     return (
         <div className="chart4-1">
             콘텐츠 분석
-            <button  onClick={showModal}>필터</button>
-                {modalOpen && <ModalBasic setModalOpen={setModalOpen} />}
             <div className="chart4-2">
                 <div className="chart4-2-1">조회수</div>
-                
-=======
-    let [modal, setModal] = useState(false);
-    return (
-        <div className="chart4-1">
-            콘텐츠 분석
-            <div className="chart4-2">
-                <div className="chart4-2-1">조회수</div>
-                <Modal />
->>>>>>> 1328745bebef1e834e23b3b4fa366e47651e2e07
+                <Modal/>
             </div>
             <div className="chart4-3">
                 <table width="100%" height="90%">
@@ -65,11 +50,7 @@ function Chart4() {
                 </table>
             </div>
         </div>
-<<<<<<< HEAD
     )
-=======
-    );
->>>>>>> 1328745bebef1e834e23b3b4fa366e47651e2e07
 }
 
 export default Chart4;
