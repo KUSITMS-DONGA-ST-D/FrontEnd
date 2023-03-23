@@ -10,6 +10,8 @@ import PopularCard from './PopularCard';
 import TotalOrderLineChartCard from './TotalOrderLineChartCard';
 import TotalIncomeDarkCard from './TotalIncomeDarkCard';
 import TotalIncomeLightCard from './TotalIncomeLightCard';
+import SecondChart from './SecondChart';
+import ThirdChart from './ThirdChart';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
 import { gridSpacing } from 'store/constant';
 import Calendarz from './Calendarz';
@@ -54,10 +56,10 @@ const Dashboard = () => {
                         <TotalGrowthBarChart isLoading={isLoading} />
                     </Grid>
                     <Grid item xs={12} md={8} lg={12}>
-                        <TotalGrowthBarChart isLoading={isLoading} />
+                        <SecondChart isLoading={isLoading} />
                     </Grid>
                     <Grid item xs={12} md={8} lg={12}>
-                        <TotalGrowthBarChart isLoading={isLoading} />
+                        <ThirdChart isLoading={isLoading} />
                     </Grid>
                 </Grid>
             </Grid>

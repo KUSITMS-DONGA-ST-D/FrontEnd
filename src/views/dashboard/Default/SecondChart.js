@@ -16,9 +16,9 @@ import MainCard from 'ui-component/cards/MainCard';
 import { gridSpacing } from 'store/constant';
 
 // chart data
-import chartData from './chart-data/total-growth-bar-chart';
-import weekData from './chart-data/total-growth-bar-week-chart';
-import monthData from './chart-data/total-growth-bar-month-chart';
+import chartData from './chart-data/Second-Chart';
+import weekData from './chart-data/Second-Week-Chart';
+import monthData from './chart-data/Second-Month-Chart';
 
 const status = [
     {
@@ -37,7 +37,7 @@ const status = [
 
 // ==============================|| DASHBOARD DEFAULT - TOTAL GROWTH BAR CHART ||============================== //
 
-const TotalGrowthBarChart = ({ isLoading }) => {
+const SecondChart = ({ isLoading }) => {
     const [value, setValue] = useState('today');
     const theme = useTheme();
     const customization = useSelector((state) => state.customization);
@@ -126,6 +126,7 @@ const TotalGrowthBarChart = ({ isLoading }) => {
                             </Grid>
                         </Grid>
                     </Grid>
+
                     <Grid item xs={12}>
                         {value == 'today' ? <Chart {...chartData} /> : value == 'week' ? <Chart {...weekData} /> : <Chart {...monthData} />}
                     </Grid>
@@ -136,8 +137,8 @@ const TotalGrowthBarChart = ({ isLoading }) => {
     );
 };
 
-TotalGrowthBarChart.propTypes = {
+SecondChart.propTypes = {
     isLoading: PropTypes.bool
 };
 
-export default TotalGrowthBarChart;
+export default SecondChart;

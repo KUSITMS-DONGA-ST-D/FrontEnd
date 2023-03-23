@@ -6,7 +6,7 @@ const againVisitor = [];
 const totalVisitor = [];
 const fetchData = async () => {
     axios
-        .get('/totalgrowthbarchart-phase1?day=1')
+        .get('/totalgrowthbarchart-phase1?day=30')
         .then((response) => {
             const data = response.data; // 받은 데이터
             console.log(data);
@@ -22,7 +22,7 @@ const fetchData = async () => {
         });
 };
 fetchData();
-const chartData = {
+const monthData = {
     height: 250,
     type: 'line',
     options: {
@@ -136,4 +136,4 @@ const chartData = {
         }
     ]
 };
-export default chartData;
+export default monthData;

@@ -1,20 +1,20 @@
 // ===========================|| DASHBOARD - TOTAL GROWTH BAR CHART ||=========================== //
 import axios from 'axios';
 
-const newVisitor = [];
-const againVisitor = [];
-const totalVisitor = [];
+const conversionRate = [];
+const accumulateUsers = [];
+const newUsers = [];
 const fetchData = async () => {
     axios
-        .get('/totalgrowthbarchart-phase1?day=1')
+        .get('/totalgrowthbarchart-phase2?day=7')
         .then((response) => {
             const data = response.data; // 받은 데이터
             console.log(data);
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
-                newVisitor.unshift(item.new_visitors);
-                againVisitor.unshift(item.again_visitors);
-                totalVisitor.unshift(item.total_visitors);
+                conversionRate.unshift(item.conversion_rate);
+                accumulateUsers.unshift(item.accumulate_users);
+                newUsers.unshift(item.new_users);
             });
         })
         .catch((error) => {
@@ -22,7 +22,7 @@ const fetchData = async () => {
         });
 };
 fetchData();
-const chartData = {
+const weekData = {
     height: 250,
     type: 'line',
     options: {
@@ -51,13 +51,11 @@ const chartData = {
         plotOptions: {
             line: {
                 horizontal: false,
-                columewidth: '50%',
-                strokeWidth: 1
+                columewidth: '50%'
             }
         },
         xaxis: {
             type: 'category',
-            // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
             categories: [
                 '1',
                 '2',
@@ -123,17 +121,17 @@ const chartData = {
     },
     series: [
         {
-            name: '신규방문자',
-            data: newVisitor
+            name: '누적가입자',
+            data: accumulateUsers
         },
         {
-            name: '재방문자',
-            data: againVisitor
+            name: '신규가입자',
+            data: newUsers
         },
         {
-            name: '총 방문자',
-            data: totalVisitor
+            name: '전환율',
+            data: conversionRate
         }
     ]
 };
-export default chartData;
+export default weekData;
