@@ -4,4 +4,25 @@
     border: 1px solid red;
     height: 250px;
     border-radius: 6px;
+    font-weight: bold;
+}
+.chart4-2{
+    width: 100%;
+    display: flex;
+    border: 1px solid red;
+    text-align: center;
+}
+.chart4-3{
+    width: 100%;
+    height: 200px;
+    border: 1px solid blue;
+}
+.chart4-2-1{
+    position: relative;
+    left: 45%;
+    font-weight: bold;
+}
+.chart4-2-2{
+    position: relative;
+    left: 80%;
 }
