@@ -1,21 +1,21 @@
 // ===========================|| DASHBOARD - TOTAL GROWTH BAR CHART ||=========================== //
 import axios from 'axios';
+import { useState } from 'react';
 
-const newVisitor = [];
-const againVisitor = [];
-const totalVisitor = [];
+const viewNumber = [];
+const sessionTime = [];
 const time = [];
 const fetchData = async () => {
     axios
-        .get('/totalgrowthbarchart-phase1?day=1')
+        .get('/totalgrowthbarchart-phase3?day=1')
         .then((response) => {
             const data = response.data; // 받은 데이터
+
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
+                viewNumber.unshift(item.view_number);
+                sessionTime.unshift(item.session_time);
                 time.unshift(item.created_date.slice(11, 13) + '시');
-                newVisitor.unshift(item.new_visitors);
-                againVisitor.unshift(item.again_visitors);
-                totalVisitor.unshift(item.total_visitors);
             });
         })
         .catch((error) => {
@@ -58,6 +58,7 @@ const chartData = {
         },
         xaxis: {
             type: 'category',
+            // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
             categories: time
         },
         legend: {
@@ -91,16 +92,12 @@ const chartData = {
     },
     series: [
         {
-            name: '신규방문자',
-            data: newVisitor
+            name: '평균 페이지 뷰수',
+            data: viewNumber
         },
         {
-            name: '재방문자',
-            data: againVisitor
-        },
-        {
-            name: '총 방문자',
-            data: totalVisitor
+            name: '평균 세션 시간',
+            data: sessionTime
         }
     ]
 };

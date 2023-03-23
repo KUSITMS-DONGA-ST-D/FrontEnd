@@ -3,6 +3,7 @@
     "version": "3.3.1",
     "private": true,
     "homepage": "https://berrydashboard.io/free",
+    "proxy": "http://simproject.kr:8080",
     "dependencies": {
         "@emotion/cache": "^11.9.3",
         "@emotion/react": "^11.9.3",
@@ -18,6 +19,7 @@
         "dayjs": "^1.11.7",
         "formik": "^2.2.9",
         "framer-motion": "^6.3.16",
+        "http-proxy-middleware": "^2.0.6",
         "material-ui-popup-state": "^4.0.1",
         "moment": "^2.29.4",
         "prop-types": "^15.8.1",
@@ -33,6 +35,8 @@
         "react-router-dom": "6.3.0",
         "react-scripts": "^5.0.1",
         "redux": "^4.2.0",
+        "styled-component": "^2.8.0",
+        "styled-components": "^5.3.9",
         "yup": "^0.32.11"
     },
     "scripts": {

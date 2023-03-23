@@ -1,21 +1,17 @@
 // ===========================|| DASHBOARD - TOTAL GROWTH BAR CHART ||=========================== //
 import axios from 'axios';
 
-const newVisitor = [];
-const againVisitor = [];
-const totalVisitor = [];
-const time = [];
+const viewNumber = [];
+const sessionTime = [];
 const fetchData = async () => {
     axios
-        .get('/totalgrowthbarchart-phase1?day=1')
+        .get('/totalgrowthbarchart-phase3?day=7')
         .then((response) => {
             const data = response.data; // 받은 데이터
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
-                time.unshift(item.created_date.slice(11, 13) + '시');
-                newVisitor.unshift(item.new_visitors);
-                againVisitor.unshift(item.again_visitors);
-                totalVisitor.unshift(item.total_visitors);
+                viewNumber.unshift(item.view_number);
+                sessionTime.unshift(item.session_time);
             });
         })
         .catch((error) => {
@@ -23,7 +19,7 @@ const fetchData = async () => {
         });
 };
 fetchData();
-const chartData = {
+const weekData = {
     height: 250,
     type: 'line',
     options: {
@@ -58,7 +54,7 @@ const chartData = {
         },
         xaxis: {
             type: 'category',
-            categories: time
+            categories: ['3.22(Wed)', '3.23(Thu)', '3.24(Fri)', '3.25(Sat)', '3.26(Sun)', '3.27(Mon)', '3.28(Tue)']
         },
         legend: {
             show: true,
@@ -91,17 +87,13 @@ const chartData = {
     },
     series: [
         {
-            name: '신규방문자',
-            data: newVisitor
+            name: '평균 페이지 뷰수',
+            data: viewNumber
         },
         {
-            name: '재방문자',
-            data: againVisitor
-        },
-        {
-            name: '총 방문자',
-            data: totalVisitor
+            name: '평균 세션 시간',
+            data: sessionTime
         }
     ]
 };
-export default chartData;
+export default weekData;

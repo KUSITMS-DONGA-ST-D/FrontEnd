@@ -10,12 +10,15 @@ import PopularCard from './PopularCard';
 import TotalOrderLineChartCard from './TotalOrderLineChartCard';
 import TotalIncomeDarkCard from './TotalIncomeDarkCard';
 import TotalIncomeLightCard from './TotalIncomeLightCard';
+import SecondChart from './SecondChart';
+import ThirdChart from './ThirdChart';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
 import { gridSpacing } from 'store/constant';
 import Calendarz from './Calendarz';
 import Chart3 from '../Chart3';
 import Voc from './Voc';
 import Chart4 from './Chart4';
+import NewVisitorCard from './NewVisitorCard';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
@@ -52,14 +55,17 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={6}>
                 <Grid container spacing={gridSpacing}>
-                    <Grid item xs={12} md={8} lg={12}>
-                        <TotalGrowthBarChart isLoading={isLoading} />
+                    <Grid sx={{ height: '100px', width: '250px' }}>
+                        <NewVisitorCard sx={{ height: '100px' }} />
                     </Grid>
                     <Grid item xs={12} md={8} lg={12}>
                         <TotalGrowthBarChart isLoading={isLoading} />
                     </Grid>
                     <Grid item xs={12} md={8} lg={12}>
-                        <TotalGrowthBarChart isLoading={isLoading} />
+                        <SecondChart isLoading={isLoading} />
+                    </Grid>
+                    <Grid item xs={12} md={8} lg={12}>
+                        <ThirdChart isLoading={isLoading} />
                     </Grid>
                 </Grid>
             </Grid>

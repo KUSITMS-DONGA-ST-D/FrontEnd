@@ -27,17 +27,11 @@ import moment from 'moment';
 function Calendarz() {
     const [value, onChange] = useState(new Date());
 
-  return (
-    <div>
-      <Calendar
-        onChange={onChange}
-        formatDay={(locale, date) =>dayjs(date).format("DD")}
-        
-        value={value}
-        
-      />
-    </div>
-  );
+    return (
+        <div>
+            <Calendar onChange={onChange} formatDay={(locale, date) => dayjs(date).format('DD')} value={value} />
+        </div>
+    );
 }
 
 export default Calendarz;

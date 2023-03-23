@@ -4,18 +4,26 @@ import axios from 'axios';
 const newVisitor = [];
 const againVisitor = [];
 const totalVisitor = [];
-const time = [];
+const day = [];
 const fetchData = async () => {
     axios
-        .get('/totalgrowthbarchart-phase1?day=1')
+        .get('/totalgrowthbarchart-phase1?day=30')
         .then((response) => {
             const data = response.data; // 받은 데이터
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
-                time.unshift(item.created_date.slice(11, 13) + '시');
+                let m = item.created_date.slice(5, 7);
+                let d = item.created_date.slice(8, 10);
+                if (m[0] == '0') {
+                    m = m.slice(1, 2);
+                }
+                if (d[0] == '0') {
+                    d = d.slice(1, 2);
+                }
                 newVisitor.unshift(item.new_visitors);
                 againVisitor.unshift(item.again_visitors);
                 totalVisitor.unshift(item.total_visitors);
+                day.unshift(m + '.' + d);
             });
         })
         .catch((error) => {
@@ -23,7 +31,7 @@ const fetchData = async () => {
         });
 };
 fetchData();
-const chartData = {
+const monthData = {
     height: 250,
     type: 'line',
     options: {
@@ -58,7 +66,8 @@ const chartData = {
         },
         xaxis: {
             type: 'category',
-            categories: time
+            // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            categories: day
         },
         legend: {
             show: true,
@@ -104,4 +113,4 @@ const chartData = {
         }
     ]
 };
-export default chartData;
+export default monthData;

@@ -1,21 +1,29 @@
 // ===========================|| DASHBOARD - TOTAL GROWTH BAR CHART ||=========================== //
 import axios from 'axios';
+import { useState } from 'react';
 
-const newVisitor = [];
-const againVisitor = [];
-const totalVisitor = [];
-const time = [];
+const viewNumber = [];
+const sessionTime = [];
+const day = [];
 const fetchData = async () => {
     axios
-        .get('/totalgrowthbarchart-phase1?day=1')
+        .get('/totalgrowthbarchart-phase3?day=30')
         .then((response) => {
             const data = response.data; // 받은 데이터
+
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
-                time.unshift(item.created_date.slice(11, 13) + '시');
-                newVisitor.unshift(item.new_visitors);
-                againVisitor.unshift(item.again_visitors);
-                totalVisitor.unshift(item.total_visitors);
+                let m = item.created_date.slice(5, 7);
+                let d = item.created_date.slice(8, 10);
+                if (m[0] == '0') {
+                    m = m.slice(1, 2);
+                }
+                if (d[0] == '0') {
+                    d = d.slice(1, 2);
+                }
+                viewNumber.unshift(item.view_number);
+                sessionTime.unshift(item.session_time);
+                day.unshift(m + '.' + d);
             });
         })
         .catch((error) => {
@@ -23,7 +31,7 @@ const fetchData = async () => {
         });
 };
 fetchData();
-const chartData = {
+const monthData = {
     height: 250,
     type: 'line',
     options: {
@@ -58,7 +66,8 @@ const chartData = {
         },
         xaxis: {
             type: 'category',
-            categories: time
+            // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            categories: day
         },
         legend: {
             show: true,
@@ -91,17 +100,13 @@ const chartData = {
     },
     series: [
         {
-            name: '신규방문자',
-            data: newVisitor
+            name: '평균 페이지 뷰수',
+            data: viewNumber
         },
         {
-            name: '재방문자',
-            data: againVisitor
-        },
-        {
-            name: '총 방문자',
-            data: totalVisitor
+            name: '평균 세션 시간',
+            data: sessionTime
         }
     ]
 };
-export default chartData;
+export default monthData;
