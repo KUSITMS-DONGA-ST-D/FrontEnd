@@ -1,9 +1,11 @@
 // ===========================|| DASHBOARD - TOTAL GROWTH BAR CHART ||=========================== //
 import axios from 'axios';
+import { useEffect } from 'react';
 
 const conversionRate = [];
 const accumulateUsers = [];
 const newUsers = [];
+const time = [];
 const fetchData = async () => {
     axios
         .get('/totalgrowthbarchart-phase2?day=1')
@@ -15,6 +17,7 @@ const fetchData = async () => {
                 conversionRate.unshift(item.conversion_rate);
                 accumulateUsers.unshift(item.accumulate_users);
                 newUsers.unshift(item.new_users);
+                time.unshift(item.created_date.slice(11, 13) + '시');
             });
         })
         .catch((error) => {
@@ -56,39 +59,7 @@ const chartData = {
         },
         xaxis: {
             type: 'category',
-            categories: [
-                '1',
-                '2',
-                '3',
-                '4',
-                '5',
-                '6',
-                '7',
-                '8',
-                '9',
-                '10',
-                '11',
-                '12',
-                '13',
-                '14',
-                '15',
-                '16',
-                '17',
-                '18',
-                '19',
-                '20',
-                '21',
-                '22',
-                '23',
-                '24',
-                '25',
-                '26',
-                '27',
-                '28',
-                '29',
-                '30',
-                '31'
-            ]
+            categories: time
         },
         legend: {
             show: true,

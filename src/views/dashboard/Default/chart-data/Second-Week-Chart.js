@@ -8,7 +8,7 @@ const fetchData = async () => {
     axios
         .get('/totalgrowthbarchart-phase2?day=7')
         .then((response) => {
-            const data = response.data; // 받은 데이터
+            let data = response.data; // 받은 데이터
             console.log(data);
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
@@ -56,39 +56,7 @@ const weekData = {
         },
         xaxis: {
             type: 'category',
-            categories: [
-                '1',
-                '2',
-                '3',
-                '4',
-                '5',
-                '6',
-                '7',
-                '8',
-                '9',
-                '10',
-                '11',
-                '12',
-                '13',
-                '14',
-                '15',
-                '16',
-                '17',
-                '18',
-                '19',
-                '20',
-                '21',
-                '22',
-                '23',
-                '24',
-                '25',
-                '26',
-                '27',
-                '28',
-                '29',
-                '30',
-                '31'
-            ]
+            categories: ['3.22(Wed)', '3.23(Thu)', '3.24(Fri)', '3.25(Sat)', '3.26(Sun)', '3.27(Mon)', '3.28(Tue)']
         },
         legend: {
             show: true,

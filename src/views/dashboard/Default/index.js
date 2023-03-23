@@ -18,6 +18,7 @@ import Calendarz from './Calendarz';
 import Chart3 from '../Chart3';
 import Voc from './Voc';
 import Chart4 from './Chart4';
+import NewVisitorCard from './NewVisitorCard';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
@@ -54,6 +55,9 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={6}>
                 <Grid container spacing={gridSpacing}>
+                    <Grid sx={{ height: '100px', width: '250px' }}>
+                        <NewVisitorCard sx={{ height: '100px' }} />
+                    </Grid>
                     <Grid item xs={12} md={8} lg={12}>
                         <TotalGrowthBarChart isLoading={isLoading} />
                     </Grid>

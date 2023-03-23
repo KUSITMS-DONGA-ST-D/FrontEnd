@@ -4,6 +4,7 @@ import axios from 'axios';
 const conversionRate = [];
 const accumulateUsers = [];
 const newUsers = [];
+const day = [];
 const fetchData = async () => {
     axios
         .get('/totalgrowthbarchart-phase2?day=30')
@@ -12,9 +13,18 @@ const fetchData = async () => {
             console.log(data);
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
+                let m = item.created_date.slice(5, 7);
+                let d = item.created_date.slice(8, 10);
+                if (m[0] == '0') {
+                    m = m.slice(1, 2);
+                }
+                if (d[0] == '0') {
+                    d = d.slice(1, 2);
+                }
                 conversionRate.unshift(item.conversion_rate);
                 accumulateUsers.unshift(item.accumulate_users);
                 newUsers.unshift(item.new_users);
+                day.unshift(m + '.' + d);
             });
         })
         .catch((error) => {
@@ -56,39 +66,7 @@ const monthData = {
         },
         xaxis: {
             type: 'category',
-            categories: [
-                '1',
-                '2',
-                '3',
-                '4',
-                '5',
-                '6',
-                '7',
-                '8',
-                '9',
-                '10',
-                '11',
-                '12',
-                '13',
-                '14',
-                '15',
-                '16',
-                '17',
-                '18',
-                '19',
-                '20',
-                '21',
-                '22',
-                '23',
-                '24',
-                '25',
-                '26',
-                '27',
-                '28',
-                '29',
-                '30',
-                '31'
-            ]
+            categories: day
         },
         legend: {
             show: true,

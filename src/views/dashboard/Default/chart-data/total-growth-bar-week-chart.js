@@ -9,7 +9,7 @@ const fetchData = async () => {
         .get('/totalgrowthbarchart-phase1?day=7')
         .then((response) => {
             const data = response.data; // 받은 데이터
-            console.log(data);
+
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
                 newVisitor.unshift(item.new_visitors);
@@ -57,40 +57,7 @@ const weekData = {
         },
         xaxis: {
             type: 'category',
-            // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            categories: [
-                '1',
-                '2',
-                '3',
-                '4',
-                '5',
-                '6',
-                '7',
-                '8',
-                '9',
-                '10',
-                '11',
-                '12',
-                '13',
-                '14',
-                '15',
-                '16',
-                '17',
-                '18',
-                '19',
-                '20',
-                '21',
-                '22',
-                '23',
-                '24',
-                '25',
-                '26',
-                '27',
-                '28',
-                '29',
-                '30',
-                '31'
-            ]
+            categories: ['3.22(Wed)', '3.23(Thu)', '3.24(Fri)', '3.25(Sat)', '3.26(Sun)', '3.27(Mon)', '3.28(Tue)']
         },
         legend: {
             show: true,
