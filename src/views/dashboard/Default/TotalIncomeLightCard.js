@@ -70,7 +70,7 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                                         mt: 0.45,
                                         mb: 0.45
                                     }}
-                                    primary={<Typography variant="h4">공지사항</Typography>}
+                                    primary={<Typography variant="h4">메모</Typography>}
                                     secondary={
                                         <Typography
                                             variant="subtitle2"
@@ -79,7 +79,7 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                                                 mt: 0.5
                                             }}
                                         >
-                                            필독* 새로운 공지사항 확인 필독* 최강D팀 필독* 최강D팀
+                                            오늘 영상 업로드 확인하기
                                         </Typography>
                                     }
                                 />
