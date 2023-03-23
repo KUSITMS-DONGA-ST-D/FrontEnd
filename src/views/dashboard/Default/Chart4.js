@@ -1,6 +1,6 @@
-import React from 'react';
+import { useState }  from 'react';
 import './Chart4.css';
-
+import Modal from './Modal';
 
 function Chart4() {
     let [modal, setModal] = useState(false);
@@ -8,7 +8,7 @@ function Chart4() {
     <div className='chart4-1'>콘텐츠 분석
         <div className='chart4-2'>
             <div className='chart4-2-1'>조회수</div>
-            <button className='chart4-2-2' onClick={() =>{ setModal(true)}}>필터</button>
+            <button className='chart4-2-2' onClick={ () =>{ setModal(true)}}>필터</button>
             {modal === true ? <Modal /> : null}
         </div>
             <div className='chart4-3'>
