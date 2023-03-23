@@ -35,9 +35,9 @@ const dashboard = {
             svgIcon: (
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="16" height="16" rx="2" fill="#979797" />
-                    <path d="M4 8H12" stroke="white" stroke-width="1.5" />
-                    <path d="M4 4H12" stroke="white" stroke-width="1.5" />
-                    <path d="M4 12H12" stroke="white" stroke-width="1.5" />
+                    <path d="M4 8H12" stroke="white" strokeWidth="1.5" />
+                    <path d="M4 4H12" stroke="white" strokeWidth="1.5" />
+                    <path d="M4 12H12" stroke="white" strokeWidth="1.5" />
                 </svg>
             ),
             icon: icons.IconKey
@@ -68,8 +68,8 @@ const dashboard = {
             svgIcon: (
                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0 14C0 11.2386 2.23858 9 5 9H11C13.7614 9 16 11.2386 16 14V15H15.9H5H0.100018C0.0344303 14.6769 0 14.3425 0 14Z"
                         fill="#979797"
                     />
@@ -100,21 +100,21 @@ const dashboard = {
             svgIcon: (
                 <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M12.9992 4C12.9992 5.44878 12.383 6.75365 11.3984 7.66682C11.8886 7.88111 12.43 8 12.9992 8C15.2084 8 16.9992 6.20914 16.9992 4C16.9992 1.79086 15.2084 0 12.9992 0C12.43 0 11.8886 0.118885 11.3984 0.333179C12.383 1.24635 12.9992 2.55122 12.9992 4Z"
                         fill="#979797"
                     />
                     <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0 14C0 11.2386 2.23858 9 5 9H11C13.7614 9 16 11.2386 16 14V15H15.9H5H0.100018C0.0344303 14.6769 0 14.3425 0 14Z"
                         fill="#979797"
                     />
                     <circle cx="8" cy="4" r="4" fill="#979797" />
                     <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M20.9003 15H17.0003H17V14H17.0003C17.0003 11.9131 15.9351 10.075 14.3184 9H16.0003C18.7618 9 21.0003 11.2386 21.0003 14C21.0003 14.0193 21.0002 14.0385 21 14.0577V15H20.9003Z"
                         fill="#979797"
                     />
@@ -131,10 +131,10 @@ const dashboard = {
             svgIcon: (
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="20" height="16" rx="3" fill="#979797" />
-                    <path d="M4 11L12 11" stroke="#D9D9D9" stroke-width="1.5" />
-                    <path d="M8 7L16 7" stroke="#D9D9D9" stroke-width="1.5" />
-                    <path d="M14 11H16" stroke="#D9D9D9" stroke-width="1.5" />
-                    <path d="M4 7L6 7" stroke="#D9D9D9" stroke-width="1.5" />
+                    <path d="M4 11L12 11" stroke="#D9D9D9" strokeWidth="1.5" />
+                    <path d="M8 7L16 7" stroke="#D9D9D9" strokeWidth="1.5" />
+                    <path d="M14 11H16" stroke="#D9D9D9" strokeWidth="1.5" />
+                    <path d="M4 7L6 7" stroke="#D9D9D9" strokeWidth="1.5" />
                 </svg>
             ),
             breadcrunbs: false
