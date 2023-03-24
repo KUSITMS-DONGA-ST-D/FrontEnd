@@ -60,7 +60,7 @@ const Voc = (props) => {
             </CommonTableRow>
             <CommonTableRow>
                 <CommonTableColumn>4</CommonTableColumn>
-                <CommonTableColumn>네번째 게시글입니다.</CommonTableColumn>
+                <CommonTableColumn>네번째 게시글임당</CommonTableColumn>
                 <CommonTableColumn>박형준 </CommonTableColumn>
                 <CommonTableColumn>2023-03-20</CommonTableColumn>
             </CommonTableRow>
