@@ -51,7 +51,6 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                     <Box sx={{ p: 2, borderTop: '15px solid #000000' }}>
                         <List sx={{ py: 0 }}>
                             <ListItem alignItems="center" disableGutters sx={{ py: 0 }}>
-                                
                                 <ListItemText
                                     sx={{
                                         py: 0,
@@ -67,7 +66,8 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                                                 mt: 0.5
                                             }}
                                         >
-                                            1. 오늘 영상 업로드 확인하기<br/>
+                                            1. 오늘 영상 업로드 확인하기
+                                            <br />
                                             2. 조회수 확인하기
                                         </Typography>
                                     }

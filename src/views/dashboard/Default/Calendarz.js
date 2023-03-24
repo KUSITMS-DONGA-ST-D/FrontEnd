@@ -21,9 +21,9 @@ import moment from 'moment';
     }
   );*/
 
-  function getMonthName(month) {
+function getMonthName(month) {
     return moment().month(month).format('MMMM');
-  }
+}
 function Calendarz() {
     const [value, onChange] = useState(new Date());
 
