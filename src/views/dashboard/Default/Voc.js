@@ -38,7 +38,7 @@ function Voc() {
 export default Voc;*/
 const Voc = (props) => {
     return (
-        <>
+        <> 
             <CommonTable headersName={['글번호', '제목', '작성자', '날짜']}></CommonTable>
             <CommonTableRow>
                 <CommonTableColumn>1</CommonTableColumn>
@@ -64,6 +64,7 @@ const Voc = (props) => {
                 <CommonTableColumn>박형준{" "}{" "}</CommonTableColumn>
                 <CommonTableColumn>2023-03-20</CommonTableColumn>
             </CommonTableRow>
+            
         </>
     );
 };
