@@ -42,6 +42,7 @@ export const ModalBtn = styled.button`
 export const ModalView = styled.div.attrs((props) => ({
     role: 'dialog'
 }))`
+    background-color: white;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -50,7 +51,7 @@ export const ModalView = styled.div.attrs((props) => ({
     width: 500px;
     height: 500px;
     border-radius: 1rem;
-    background-color: white;
+    
     > .close-btn {
         // X 버튼을 화면 정중앙으로 정렬
         position: absolute;
@@ -61,8 +62,9 @@ export const ModalView = styled.div.attrs((props) => ({
     .first {
         height: 400px;
         width: 80%;
-        border: 1px solid gray;
+        border: 1px solid white;
         border-radius: 8px;
+        background-color: white;
     }
     .date-set {
         text-align: left;
