@@ -105,20 +105,9 @@ function Chart3() {
                                     </a>
                                 </td>
                                 <td>비염의 수술적 관리2</td>
-                                <td>2023.3.29 13:20</td>
+                                <td>2023.3.28 13:20</td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <a href="https://mediflix.co.kr/live/detail?id=457" target="_blank">
-                                        <img
-                                            src="https://api.mediflix.co.kr/storage/live/background/1677487052김인재 썸네일 파트1.png"
-                                            alt="썸네일"
-                                        ></img>
-                                    </a>
-                                </td>
-                                <td>심부전 진단 및 치료</td>
-                                <td>2023.3.30 13:20</td>
-                            </tr>
+                            
                         </table>
                     </div>
                 </div>
