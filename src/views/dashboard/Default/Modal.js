@@ -1,4 +1,6 @@
 import { useState, Component } from 'react';
+import { useRecoilState } from 'recoil';
+import { modalState } from '../../../store/recoil';
 
 import styled from 'styled-components';
 
@@ -80,6 +82,7 @@ export const ModalView = styled.div.attrs((props) => ({
 `;
 
 export const Modal = () => {
+    const [modal, setModal] = useRecoilState(modalState);
     const STARTDAY = [
         { value: '2023-02-10', name: '2023-01-01' },
         { value: '2023-02-10', name: '2023-01-02' },
@@ -283,7 +286,9 @@ export const Modal = () => {
     const openModalHandler = () => {
         setIsOpen(!isOpen);
     };
-    const buttonClick = () => {};
+    const buttonClick = () => {
+        setModal(true);
+    };
     const SelectBox = (props) => {
         function handleChange(e) {
             // event handler

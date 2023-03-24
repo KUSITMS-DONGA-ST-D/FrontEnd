@@ -2,23 +2,25 @@ import { Modal } from './Modal';
 import React, { useState } from 'react';
 import './Chart4.css';
 import ModalBasic from './ModalBasic';
+import { useRecoilState } from 'recoil';
+import { modalState } from '../../../store/recoil';
 
 function Chart4() {
     const [modalOpen, setModalOpen] = useState(false);
-    const [modal, setModal] = useState(false);
+    const [modal, setModal] = useRecoilState(modalState);
     const showModal = () => {
         setModalOpen(true);
     };
     const isModal = () => {
-        setModal(true);
+        setModal(!modal);
     };
-
+    console.log(modal);
     return (
         <div className="chart4-1">
             콘텐츠 분석
             <div className="chart4-2">
                 <div className="chart4-2-1">조회수</div>
-                <Modal onClick={isModal} />
+                <Modal />
             </div>
             <div className="chart4-3">
                 <table width="100%" height="90%">
@@ -30,7 +32,7 @@ function Chart4() {
                         <th>관심수</th>
                         <th>댓글수</th>
                     </tr>
-                    {!Modal ? (
+                    {!modal ? (
                         <>
                             <tr>
                                 <td>1</td>

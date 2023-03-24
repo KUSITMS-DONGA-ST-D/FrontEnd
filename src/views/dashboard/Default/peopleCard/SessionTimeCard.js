@@ -30,7 +30,7 @@ const fetchData = async () => {
         .get('/totalgrowthbarchart-phase1?day=30')
         .then((response) => {
             const data = response.data; // 받은 데이터
-            SessionTime = data[0].session_time;
+            sessionTime = data[0].session_time;
         })
         .catch((error) => {
             console.log(error);
