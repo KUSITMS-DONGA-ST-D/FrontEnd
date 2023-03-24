@@ -25,6 +25,7 @@
     padding: 5px 3px;
     display: flex;
     height: 30px;
+    margin-right: 23px;
   }
   .common-table-row{
     display: flex;

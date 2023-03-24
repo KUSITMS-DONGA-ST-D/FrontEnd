@@ -39,36 +39,30 @@ export default Voc;*/
 const Voc = (props) => {
     return (
         <>
-            <CommonTable headersName={['글번호', '제목', '등록일', '조회수']}></CommonTable>
+            <CommonTable headersName={['글번호', '제목', '작성자', '날짜']}></CommonTable>
             <CommonTableRow>
                 <CommonTableColumn>1</CommonTableColumn>
-                <CommonTableColumn>첫번째 게시글입니다.</CommonTableColumn>
-                <CommonTableColumn>2020-10-25</CommonTableColumn>
-                <CommonTableColumn>6</CommonTableColumn>
+                <CommonTableColumn>큐시즘 27기 최고</CommonTableColumn>
+                <CommonTableColumn>박형준{" "}{" "}</CommonTableColumn>
+                <CommonTableColumn>2023-03-20</CommonTableColumn>
             </CommonTableRow>
             <CommonTableRow>
                 <CommonTableColumn>2</CommonTableColumn>
-                <CommonTableColumn>두번째 게시글입니다.</CommonTableColumn>
-                <CommonTableColumn>2020-10-25</CommonTableColumn>
-                <CommonTableColumn>5</CommonTableColumn>
+                <CommonTableColumn>동아 st D팀 최고.{" "}</CommonTableColumn>
+                <CommonTableColumn>박형준{" "}{" "}</CommonTableColumn>
+                <CommonTableColumn>2023-03-20</CommonTableColumn>
             </CommonTableRow>
             <CommonTableRow>
                 <CommonTableColumn>3</CommonTableColumn>
-                <CommonTableColumn>세번째 게시글입니다.</CommonTableColumn>
-                <CommonTableColumn>2020-10-25</CommonTableColumn>
-                <CommonTableColumn>1</CommonTableColumn>
+                <CommonTableColumn>모든 팀 고생 많았어요.</CommonTableColumn>
+                <CommonTableColumn>박형준{" "}{" "}</CommonTableColumn>
+                <CommonTableColumn>2023-03-20</CommonTableColumn>
             </CommonTableRow>
             <CommonTableRow>
                 <CommonTableColumn>4</CommonTableColumn>
                 <CommonTableColumn>네번째 게시글입니다.</CommonTableColumn>
-                <CommonTableColumn>2020-10-25</CommonTableColumn>
-                <CommonTableColumn>2</CommonTableColumn>
-            </CommonTableRow>
-            <CommonTableRow>
-                <CommonTableColumn>5</CommonTableColumn>
-                <CommonTableColumn>다섯번째 게시글입니다.</CommonTableColumn>
-                <CommonTableColumn>2020-10-25</CommonTableColumn>
-                <CommonTableColumn>4</CommonTableColumn>
+                <CommonTableColumn>박형준{" "}{" "}</CommonTableColumn>
+                <CommonTableColumn>2023-03-20</CommonTableColumn>
             </CommonTableRow>
         </>
     );
