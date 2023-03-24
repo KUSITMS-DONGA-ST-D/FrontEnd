@@ -100,7 +100,7 @@ const monthData = {
     },
     series: [
         {
-            name: '평균 페이지 뷰수',
+            name: '평균 페이지 뷰 수',
             data: viewNumber
         },
         {

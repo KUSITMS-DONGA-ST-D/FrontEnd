@@ -68,6 +68,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
                         borderRight: 'none',
                         borderRadius: '10px',
                         padding: '10px 0',
+                        margin: '10px',
                         [theme.breakpoints.up('md')]: {
                             top: '88px'
                         }
