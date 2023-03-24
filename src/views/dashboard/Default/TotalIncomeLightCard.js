@@ -57,7 +57,11 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                                         mt: 0.45,
                                         mb: 0.45
                                     }}
-                                    primary={<Typography variant="h4" textAlign="center">메모</Typography>}
+                                    primary={
+                                        <Typography variant="h4" textAlign="center">
+                                            메모
+                                        </Typography>
+                                    }
                                     secondary={
                                         <Typography
                                             variant="subtitle2"
@@ -66,9 +70,11 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                                                 mt: 0.5
                                             }}
                                         >
-                                             신규 방문자수 급격히 증가<br/>
-                                             컨텐츠 업로드 잊지말기<br/>
-                                             Live 방송을 위한 장비 대여하기
+                                            신규 방문자수 급격히 증가
+                                            <br />
+                                            컨텐츠 업로드 잊지말기
+                                            <br />
+                                            Live 방송을 위한 장비 대여하기
                                         </Typography>
                                     }
                                 />

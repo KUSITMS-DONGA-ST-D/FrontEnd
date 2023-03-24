@@ -67,16 +67,16 @@ const dashboard = {
             icon: icons.IconPalette,
             svgIcon: (
                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="1" width="16" height="16" rx="1" fill="#979797"/>
-                <rect x="3" width="2" height="2" fill="#979797"/>
-                <rect x="11" width="2" height="2" fill="#979797"/>
-                <rect width="16" height="2" transform="matrix(1 0 0 -1 0 7)" fill="white"/>
-                <circle cx="3.75" cy="9.75" r="0.75" fill="white"/>
-                <circle cx="3.75" cy="12.75" r="0.75" fill="white"/>
-                <circle cx="7.75" cy="9.75" r="0.75" fill="white"/>
-                <circle cx="7.75" cy="12.75" r="0.75" fill="white"/>
-                <circle cx="11.75" cy="9.75" r="0.75" fill="white"/>
-                <circle cx="11.75" cy="12.75" r="0.75" fill="white"/>
+                    <rect y="1" width="16" height="16" rx="1" fill="#979797" />
+                    <rect x="3" width="2" height="2" fill="#979797" />
+                    <rect x="11" width="2" height="2" fill="#979797" />
+                    <rect width="16" height="2" transform="matrix(1 0 0 -1 0 7)" fill="white" />
+                    <circle cx="3.75" cy="9.75" r="0.75" fill="white" />
+                    <circle cx="3.75" cy="12.75" r="0.75" fill="white" />
+                    <circle cx="7.75" cy="9.75" r="0.75" fill="white" />
+                    <circle cx="7.75" cy="12.75" r="0.75" fill="white" />
+                    <circle cx="11.75" cy="9.75" r="0.75" fill="white" />
+                    <circle cx="11.75" cy="12.75" r="0.75" fill="white" />
                 </svg>
             ),
             breadcrumbs: false

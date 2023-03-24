@@ -34,9 +34,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
                 <Box component="span" sx={{ display: { xs: 'none', md: 'block', backgroundColor: '#FFFFFF' }, flexGrow: 1 }}>
                     <LogoSection />
                 </Box>
-                <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
-                    
-                </ButtonBase>
+                <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden', backgroundColor: '#FFFFFF' }}></ButtonBase>
             </Box>
 
             {/* header search */}
