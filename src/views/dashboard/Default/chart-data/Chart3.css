@@ -1,5 +1,5 @@
 .cc {
-    height: 200px;
+    height: 230px;
     border: none;
     background-color: white;
     border-radius: 6px;
@@ -21,4 +21,8 @@
 .cc3 {
     margin-top: 3px;
     height: 70%;
+}
+img{
+    height: 35px;
+    width: 70px;
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Component } from 'react';
 
 import styled from 'styled-components';
 
@@ -82,11 +82,49 @@ export const ModalView = styled.div.attrs((props) => ({
 `;
 
 export const Modal = () => {
+    const OPTIONS = [
+        { value: "apple", name: "사과" },
+        { value: "banana", name: "바나나" },
+        { value: "orange", name: "오렌지" },
+    ];
+    const AGE = [
+        { value: "40", name: "40세" },
+        { value: "50", name: "50세" },
+        { value: "60", name: "60세" },
+    ];
+    const MAN = [
+        { value: "Male", name: "남자" },
+        { value: "Female", name: "여자" },
+        
+    ];
+    const MEDI = [
+        { value: "apple", name: "뇌과학" },
+        { value: "banana", name: "바나나" },
+        { value: "orange", name: "오렌지" },
+    ];
+
     const [isOpen, setIsOpen] = useState(false);
     const openModalHandler = () => {
         setIsOpen(!isOpen);
     };
-
+    const SelectBox = (props) => {
+        const handleChange = (e) => {
+            // event handler
+            console.log(e.target.value);
+        };
+        return (
+            <select onChange={handleChange}>
+                {props.options.map((option) => (
+                    <option
+                        key={option.value}
+                        value={option.value}
+                    >
+                        {option.name}
+                    </option>
+                ))}
+            </select>
+        );
+    };
     return (
         <>
             <ModalContainer>
@@ -95,13 +133,18 @@ export const Modal = () => {
                     <ModalBackdrop onClick={openModalHandler}>
                         <ModalView>
                             <div className="close-btn">&times;</div>
-                            <div className='first'>필터
-                            <div className='date-set'>날짜 세팅 :</div>
-                            <div className='date-set'>연령 :</div>
-                            <div className='date-set'>성별 :</div>
-                            <div className='date-set'>과 :</div>
-                            </div>
+                            
+                            <div className='first' onClick={isOpen}>필터
+                            <div className='date-set'>날짜 세팅 :
+                            <SelectBox options={OPTIONS}></SelectBox></div>
+                            <div className='date-set'>연령 :
+                            <SelectBox options={AGE}></SelectBox></div>
+                            <div className='date-set'>성별 :
+                            <SelectBox options={MAN}></SelectBox></div>
+                            <div className='date-set'>과 :
+                            <SelectBox options={MEDI}></SelectBox></div>
                             <button className ='check'>확인</button>
+                            </div>
                         </ModalView>
                     </ModalBackdrop>
                 ) : null}
