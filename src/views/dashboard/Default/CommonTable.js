@@ -9,9 +9,9 @@ const CommonTable = (props) => {
                 <tr>
                     {headersName.map((item, index) => {
                         return (
-                            <td className="common-table-header-column" key={index}>
+                            <th className="common-table-header-column" key={index}>
                                 {item}
-                            </td>
+                            </th>
                         );
                     })}
                 </tr>

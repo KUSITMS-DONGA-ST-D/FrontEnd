@@ -61,11 +61,7 @@ const Dashboard = () => {
                 </Grid>
             </Grid>
             <Grid item xs={6}>
-                <Grid
-                    container
-                    spacing={gridSpacing}
-                    sx={{ marginTop: '3px', marginLeft: '1px', backgroundColor: '#FFFFFF', padding: '0px' }}
-                >
+                <Grid container spacing={gridSpacing}>
                     <Grid sx={{ display: 'flex', height: '80px', width: '100%' }}>
                         <NewVisitorCard />
                         <AgainVisitorCard />
