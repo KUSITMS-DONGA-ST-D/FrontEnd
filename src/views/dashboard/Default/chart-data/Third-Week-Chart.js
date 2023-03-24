@@ -8,6 +8,7 @@ const fetchData = async () => {
         .get('/totalgrowthbarchart-phase3?day=7')
         .then((response) => {
             const data = response.data; // 받은 데이터
+            console.log(data);
             data.forEach((item) => {
                 // 각 배열 요소에서 필요한 데이터 추출
                 viewNumber.unshift(item.view_number);

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './Calendarz.css';
 import dayjs from 'dayjs';
+import moment from 'moment';
 /*const [mark, setMark] = useState([]);
 
   const { data } = useQuery(
@@ -20,6 +21,9 @@ import dayjs from 'dayjs';
     }
   );*/
 
+  function getMonthName(month) {
+    return moment().month(month).format('MMMM');
+  }
 function Calendarz() {
     const [value, onChange] = useState(new Date());
 

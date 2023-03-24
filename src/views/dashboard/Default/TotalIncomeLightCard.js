@@ -51,19 +51,7 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                     <Box sx={{ p: 2, borderTop: '15px solid #000000' }}>
                         <List sx={{ py: 0 }}>
                             <ListItem alignItems="center" disableGutters sx={{ py: 0 }}>
-                                <ListItemAvatar>
-                                    <Avatar
-                                        variant="rounded"
-                                        sx={{
-                                            ...theme.typography.commonAvatar,
-                                            ...theme.typography.largeAvatar,
-                                            backgroundColor: theme.palette.warning.light,
-                                            color: theme.palette.warning.dark
-                                        }}
-                                    >
-                                        <StorefrontTwoToneIcon fontSize="inherit" />
-                                    </Avatar>
-                                </ListItemAvatar>
+                                
                                 <ListItemText
                                     sx={{
                                         py: 0,
@@ -79,7 +67,8 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                                                 mt: 0.5
                                             }}
                                         >
-                                            오늘 영상 업로드 확인하기
+                                            1. 오늘 영상 업로드 확인하기<br/>
+                                            2. 조회수 확인하기
                                         </Typography>
                                     }
                                 />

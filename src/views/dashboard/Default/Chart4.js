@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { Modal } from './Modal';
+import React, { useState } from 'react';
 import './Chart4.css';
-import Modal from './Modal';
+import ModalBasic from './ModalBasic';
 
 function Chart4() {
-    let [modal, setModal] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const showModal = () => {
+        setModalOpen(true);
+    };
+
     return (
         <div className="chart4-1">
             콘텐츠 분석
             <div className="chart4-2">
                 <div className="chart4-2-1">조회수</div>
-                <Modal />
+                <Modal/>
             </div>
             <div className="chart4-3">
                 <table width="100%" height="90%">
@@ -44,7 +50,7 @@ function Chart4() {
                 </table>
             </div>
         </div>
-    );
+    )
 }
 
 export default Chart4;
