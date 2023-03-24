@@ -61,13 +61,15 @@ export const ModalView = styled.div.attrs((props) => ({
     .first {
         height: 400px;
         width: 80%;
-        border: 1px solid red;
+        border: 1px solid gray;
+        border-radius: 8px;
     }
     .date-set {
         text-align: left;
-        border: 1px solid red;
+        border: 1px solid gray;
         height: 20%;
         margin-top: 10px;
+        border-radius: 8px;
     }
     .check {
         position: absolute;
