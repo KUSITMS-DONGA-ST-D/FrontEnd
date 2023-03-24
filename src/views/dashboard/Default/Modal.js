@@ -41,7 +41,7 @@ export const ModalView = styled.div.attrs((props) => ({
     role: 'dialog'
 }))`
     display: flex;
-    text-align:center;
+    text-align: center;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -56,51 +56,48 @@ export const ModalView = styled.div.attrs((props) => ({
         top: 10px;
         cursor: pointer;
     }
-    .first{
+    .first {
         height: 400px;
         width: 80%;
         border: 1px solid red;
-
     }
-    .date-set{
+    .date-set {
         text-align: left;
         border: 1px solid red;
         height: 20%;
         margin-top: 10px;
     }
-    .check{
+    .check {
         position: absolute;
         bottom: 17px;
-        width :200px;
+        width: 200px;
         background-color: red;
-        font-Weight : bold;
+        font-weight: bold;
         color: white;
         height: 30px;
         border-radius: 20px;
-        
     }
 `;
 
 export const Modal = () => {
     const OPTIONS = [
-        { value: "apple", name: "사과" },
-        { value: "banana", name: "바나나" },
-        { value: "orange", name: "오렌지" },
+        { value: 'apple', name: '사과' },
+        { value: 'banana', name: '바나나' },
+        { value: 'orange', name: '오렌지' }
     ];
     const AGE = [
-        { value: "40", name: "40세" },
-        { value: "50", name: "50세" },
-        { value: "60", name: "60세" },
+        { value: '40', name: '40세' },
+        { value: '50', name: '50세' },
+        { value: '60', name: '60세' }
     ];
     const MAN = [
-        { value: "Male", name: "남자" },
-        { value: "Female", name: "여자" },
-        
+        { value: 'Male', name: '남자' },
+        { value: 'Female', name: '여자' }
     ];
     const MEDI = [
-        { value: "apple", name: "뇌과학" },
-        { value: "banana", name: "바나나" },
-        { value: "orange", name: "오렌지" },
+        { value: 'apple', name: '뇌과학' },
+        { value: 'banana', name: '바나나' },
+        { value: 'orange', name: '오렌지' }
     ];
 
     const [isOpen, setIsOpen] = useState(false);
@@ -108,17 +105,14 @@ export const Modal = () => {
         setIsOpen(!isOpen);
     };
     const SelectBox = (props) => {
-        const handleChange = (e) => {
+        function handleChange(e) {
             // event handler
             console.log(e.target.value);
-        };
+        }
         return (
             <select onChange={handleChange}>
                 {props.options.map((option) => (
-                    <option
-                        key={option.value}
-                        value={option.value}
-                    >
+                    <option key={option.value} value={option.value}>
                         {option.name}
                     </option>
                 ))}
@@ -130,20 +124,24 @@ export const Modal = () => {
             <ModalContainer>
                 <ModalBtn onClick={openModalHandler}>{isOpen ? 'Opened!' : 'Click Me'}</ModalBtn>
                 {isOpen ? (
-                    <ModalBackdrop onClick={openModalHandler}>
+                    <ModalBackdrop onClick={(openModalHandler, (event) => event.stopPropagation())}>
                         <ModalView>
                             <div className="close-btn">&times;</div>
-                            
-                            <div className='first' onClick={isOpen}>필터
-                            <div className='date-set'>날짜 세팅 :
-                            <SelectBox options={OPTIONS}></SelectBox></div>
-                            <div className='date-set'>연령 :
-                            <SelectBox options={AGE}></SelectBox></div>
-                            <div className='date-set'>성별 :
-                            <SelectBox options={MAN}></SelectBox></div>
-                            <div className='date-set'>과 :
-                            <SelectBox options={MEDI}></SelectBox></div>
-                            <button className ='check'>확인</button>
+                            <div className="first">
+                                필터
+                                <div className="date-set">
+                                    날짜 세팅 :<SelectBox options={OPTIONS}></SelectBox>
+                                </div>
+                                <div className="date-set">
+                                    연령 :<SelectBox options={AGE}></SelectBox>
+                                </div>
+                                <div className="date-set">
+                                    성별 :<SelectBox options={MAN}></SelectBox>
+                                </div>
+                                <div className="date-set">
+                                    과 :<SelectBox options={MEDI}></SelectBox>
+                                </div>
+                                <button className="check">확인</button>
                             </div>
                         </ModalView>
                     </ModalBackdrop>

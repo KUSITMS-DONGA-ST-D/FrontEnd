@@ -15,7 +15,7 @@ function Chart4() {
             콘텐츠 분석
             <div className="chart4-2">
                 <div className="chart4-2-1">조회수</div>
-                <Modal/>
+                <Modal />
             </div>
             <div className="chart4-3">
                 <table width="100%" height="90%">
@@ -50,7 +50,7 @@ function Chart4() {
                 </table>
             </div>
         </div>
-    )
+    );
 }
 
 export default Chart4;

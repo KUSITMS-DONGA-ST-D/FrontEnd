@@ -55,17 +55,32 @@ function Chart3() {
                                 <th>업로드 날짜 및 시간</th>
                             </tr>
                             <tr>
-                                <td><img src='https://api.mediflix.co.kr/storage/live/thumb/1647845163%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AD%E1%84%89%E1%85%AE%E1%84%82%E1%85%B5%E1%86%B7%202-2.png'></img></td>
+                                <td>
+                                    <img
+                                        src="https://api.mediflix.co.kr/storage/live/thumb/1647845163%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AD%E1%84%89%E1%85%AE%E1%84%82%E1%85%B5%E1%86%B7%202-2.png"
+                                        alt="썸네일"
+                                    ></img>
+                                </td>
                                 <td>의료 상식</td>
                                 <td>2023.3.28 20시</td>
                             </tr>
                             <tr>
-                                <td><img src='https://api.mediflix.co.kr/storage/live/thumb/1647845163%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AD%E1%84%89%E1%85%AE%E1%84%82%E1%85%B5%E1%86%B7%202-2.png'></img></td>
+                                <td>
+                                    <img
+                                        src="https://api.mediflix.co.kr/storage/live/thumb/1647845163%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AD%E1%84%89%E1%85%AE%E1%84%82%E1%85%B5%E1%86%B7%202-2.png"
+                                        alt="썸네일"
+                                    ></img>
+                                </td>
                                 <td>의료 상식</td>
                                 <td>2023.3.28 20시</td>
                             </tr>
                             <tr>
-                                <td><img src='https://api.mediflix.co.kr/storage/live/thumb/1647845163%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AD%E1%84%89%E1%85%AE%E1%84%82%E1%85%B5%E1%86%B7%202-2.png'></img></td>
+                                <td>
+                                    <img
+                                        src="https://api.mediflix.co.kr/storage/live/thumb/1647845163%E1%84%80%E1%85%A9%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AD%E1%84%89%E1%85%AE%E1%84%82%E1%85%B5%E1%86%B7%202-2.png"
+                                        alt="썸네일"
+                                    ></img>
+                                </td>
                                 <td>의료 상식</td>
                                 <td>2023.3.28 20시</td>
                             </tr>

@@ -19,17 +19,18 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
     color: theme.palette.primary.light,
     overflow: 'hidden',
     position: 'relative',
-    margin: '24px',
-    height: '55px'
+    margin: '15px 5px',
+    height: '90%',
+    width: '33%'
 }));
 
-let newVisitor = 0;
+let againVisitor = 0;
 const fetchData = async () => {
     axios
         .get('/totalgrowthbarchart-phase1?day=30')
         .then((response) => {
             const data = response.data; // 받은 데이터
-            newVisitor = data[0].new_visitors;
+            againVisitor = data[0].again_visitors;
         })
         .catch((error) => {
             console.log(error);
@@ -38,11 +39,11 @@ const fetchData = async () => {
 fetchData();
 // ==============================|| DASHBOARD - TOTAL INCOME DARK CARD ||============================== //
 
-const NewVisitorCard = ({ isLoading }) => {
+const AgainVisitorCard = ({ isLoading }) => {
     // const theme = useTheme();
     useEffect(() => {
-        console.log(newVisitor);
-    }, [newVisitor]);
+        console.log(againVisitor);
+    }, [againVisitor]);
     return (
         <>
             {isLoading ? (
@@ -50,8 +51,11 @@ const NewVisitorCard = ({ isLoading }) => {
             ) : (
                 <CardWrapper border={false} content={false}>
                     <Box sx={{ p: 2, backgroundColor: '#FF6060' }}>
-                        <div>신규 방문자수</div>
-                        <div style={{ float: 'right', textAline: 'right' }}>{newVisitor}명</div>
+                        <div>재방문자수</div>
+                        <div style={{ display: 'flex', float: 'right' }}>
+                            <div style={{ fontSize: '33px' }}>{/*againVisitor*/}272</div>
+                            <div style={{ paddingTop: '6px' }}>명</div>
+                        </div>
                     </Box>
                 </CardWrapper>
             )}
@@ -59,8 +63,8 @@ const NewVisitorCard = ({ isLoading }) => {
     );
 };
 
-NewVisitorCard.propTypes = {
+AgainVisitorCard.propTypes = {
     isLoading: PropTypes.bool
 };
 
-export default NewVisitorCard;
+export default AgainVisitorCard;

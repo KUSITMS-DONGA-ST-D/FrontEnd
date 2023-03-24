@@ -18,7 +18,14 @@ import Calendarz from './Calendarz';
 import Chart3 from '../Chart3';
 import Voc from './Voc';
 import Chart4 from './Chart4';
-import NewVisitorCard from './NewVisitorCard';
+import NewVisitorCard from './peopleCard/NewVisitorCard';
+import AgainVisitorCard from './peopleCard/AgainVisitorCard';
+import TotalVisitorCard from './peopleCard/TotalVisitorCard';
+import NewUsers from './peopleCard/NewUsersCard';
+import AccumulateUserCard from './peopleCard/AccumulateUsersCard';
+import ConversionRateCard from './peopleCard/ConversionRateCard';
+import ViewNumberCard from './peopleCard/ViewNumberCard';
+import SessionTimeCard from './peopleCard/SessionTimeCard';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
@@ -54,15 +61,30 @@ const Dashboard = () => {
                 </Grid>
             </Grid>
             <Grid item xs={6}>
-                <Grid container spacing={gridSpacing}>
-                    <Grid sx={{ height: '100px', width: '250px' }}>
-                        <NewVisitorCard sx={{ height: '100px' }} />
+                <Grid
+                    container
+                    spacing={gridSpacing}
+                    sx={{ marginTop: '3px', marginLeft: '1px', backgroundColor: '#FFFFFF', padding: '0px' }}
+                >
+                    <Grid sx={{ display: 'flex', height: '80px', width: '100%' }}>
+                        <NewVisitorCard />
+                        <AgainVisitorCard />
+                        <TotalVisitorCard />
                     </Grid>
                     <Grid item xs={12} md={8} lg={12}>
                         <TotalGrowthBarChart isLoading={isLoading} />
                     </Grid>
+                    <Grid sx={{ display: 'flex', height: '80px', width: '100%' }}>
+                        <NewUsers />
+                        <AccumulateUserCard />
+                        <ConversionRateCard />
+                    </Grid>
                     <Grid item xs={12} md={8} lg={12}>
                         <SecondChart isLoading={isLoading} />
+                    </Grid>
+                    <Grid sx={{ display: 'flex', height: '80px', width: '100%' }}>
+                        <ViewNumberCard />
+                        <SessionTimeCard />
                     </Grid>
                     <Grid item xs={12} md={8} lg={12}>
                         <ThirdChart isLoading={isLoading} />

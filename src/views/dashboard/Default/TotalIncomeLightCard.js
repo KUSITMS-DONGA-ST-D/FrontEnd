@@ -51,7 +51,6 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                     <Box sx={{ p: 2, borderTop: '15px solid #000000' }}>
                         <List sx={{ py: 0 }}>
                             <ListItem alignItems="center" disableGutters sx={{ py: 0 }}>
-                                
                                 <ListItemText
                                     sx={{
                                         py: 0,
