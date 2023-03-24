@@ -16,6 +16,7 @@ import { SET_MENU } from 'store/actions';
 
 // assets
 import { IconChevronRight } from '@tabler/icons';
+import UserMade from './Sidebar/User-made';
 
 // styles
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
@@ -94,8 +95,9 @@ const MainLayout = () => {
             </AppBar>
 
             {/* drawer */}
-            <Sidebar drawerOpen={!matchDownMd ? leftDrawerOpened : !leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
-
+            <Sidebar drawerOpen={!matchDownMd ? leftDrawerOpened : !leftDrawerOpened} drawerToggle={handleLeftDrawerToggle}>
+            </Sidebar>
+               
             {/* main content */}
             <Main theme={theme} open={leftDrawerOpened}>
                 {/* breadcrumb */}

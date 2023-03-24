@@ -28,24 +28,31 @@ function Chart4() {
                     </tr>
                     <tr>
                         <td>썸넬</td>
-                        <td>어쩌구</td>
-                        <td>영상분야</td>
-                        <td>6</td>
-                        <td>4</td>
+                        <td>Korea disease week 2022</td>
+                        <td>임상계열</td>
+                        <td>30</td>
+                        <td>14</td>
                     </tr>
                     <tr>
                         <td>썸넬</td>
-                        <td>어쩌구</td>
-                        <td>영상분야</td>
-                        <td>6</td>
-                        <td>4</td>
+                        <td>Korea disease week 2021</td>
+                        <td>심장내과 계열</td>
+                        <td>25</td>
+                        <td>12</td>
                     </tr>
                     <tr>
                         <td>썸넬</td>
-                        <td>어쩌구</td>
-                        <td>영상분야</td>
-                        <td>6</td>
-                        <td>4</td>
+                        <td>공보의를 위한 의로운 클라쓰</td>
+                        <td>제목</td>
+                        <td>21</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>썸넬</td>
+                        <td>밤의 불청객</td>
+                        <td>가정의학과</td>
+                        <td>21</td>
+                        <td>10</td>
                     </tr>
                 </table>
             </div>

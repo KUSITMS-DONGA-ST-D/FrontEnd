@@ -35,24 +35,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
                     <LogoSection />
                 </Box>
                 <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
-                    <Avatar
-                        variant="rounded"
-                        sx={{
-                            ...theme.typography.commonAvatar,
-                            ...theme.typography.mediumAvatar,
-                            transition: 'all .2s ease-in-out',
-                            backgroundColor: '#373737',
-                            color: '#979797',
-                            '&:hover': {
-                                background: '#EE3C30',
-                                color: '#FFFFFF'
-                            }
-                        }}
-                        onClick={handleLeftDrawerToggle}
-                        color="inherit"
-                    >
-                        <IconMenu2 stroke={1.5} size="1.3rem" />
-                    </Avatar>
+                    
                 </ButtonBase>
             </Box>
 
